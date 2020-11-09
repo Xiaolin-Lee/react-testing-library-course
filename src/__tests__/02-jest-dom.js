@@ -8,7 +8,7 @@ test('renders a number input with a label "Favorite Number"', () => {
   const div = document.createElement('div');
   ReactDOM.render(<FavoriteNumber />, div);
   // 1. assert the input type attribute is `number` by using jest-dom's toHaveAttribute API
-  expect(div.querySelector('input').type).toBe('number');
+  expect(div.querySelector('input')).toHaveAttribute('type', 'number');
   // 2. assert the label text content is "Favorite Number" by using jest-dom's toHaveTextContent API
-  expect(div.querySelector('label').textContent).toBe('Favorite Number');
+  expect(div.querySelector('label')).toHaveTextContent('Favorite Number');
 });
